@@ -2,7 +2,7 @@
     require "config.php";
     if(isset($_POST['submit'])){
         $user_id = $_POST['username'];
-        $password = $_POST['password'];
+        $password = sha1($_POST['password']);
         $present = mysqli_query($connect, "SELECT * FROM sign_up WHERE username = '$user_id' OR email = '$user_id' ");
         $row = mysqli_fetch_assoc($present);
         if(mysqli_num_rows($present) > 0){
