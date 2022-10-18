@@ -12,12 +12,12 @@
                 header('Location: dashboard.php');
             }else{
                 echo "<script>
-            alert('Password Incorrect';
+            alert('Password Incorrect');
                     </script>";
             }
         }else{
             echo "<script>
-            alert('user does not exit';
+            alert('user does not exit');
         </script>";
         }
     }
